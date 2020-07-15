@@ -1,0 +1,13 @@
+.input-group{
+    padding: 10px;
+}
+
+.submit{
+    padding: 10px;
+}
+
+.form-control{
+    height: 60px;
+    min-height: 60px;
+    max-height: 200px;
+}

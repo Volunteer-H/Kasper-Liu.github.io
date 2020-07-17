@@ -22,7 +22,7 @@ a, a:active, a:hover, a:link, a:visited {
     /* 取消按下時的藍色外框 */
     outline: none;
     /* 顏色 */
-    color: #2b2b2b;
+    color: #e74c3c;
 }
 a:hover{
     /* 顏色 */

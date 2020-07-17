@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@
                 </ul>
                 <div class="ml-auto">
                     <a href="contact.html" class="btn btn-outline-success text-success my-2 my-sm-0">Contact</a>
-                    
+
                 </div>
             </div>
         </nav>
@@ -47,9 +48,10 @@
     <script src="./encrypt.js"></script>
 
     <div class="container">
-        <h3 class="col-md-12" id="output"></h3>
+        <h3 class="col-md-12" id="output1"></h3>
+        <h3 class="col-md-12" id="output2"></h3>
     </div>
-    
+
     <form onsubmit="run(); return false;">
         <div class="container">
             <div class="input-group">
@@ -57,6 +59,12 @@
                   <span class="input-group-text" >Text:</span>
                 </div>
                 <textarea class="form-control" aria-label="With textarea" id="text"></textarea>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" >Turns:</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="turn"></textarea>
             </div>
             <div class="input-group">
                 <button type="submit" class="btn btn-primary col-md-12">Submit</button>

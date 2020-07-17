@@ -1,6 +1,7 @@
 function run(){
 let text = document.querySelector('#text').value;
-encrypt(text , 12);
+let turn = document.querySelector('#turn').value;
+encrypt(text , turn);
 }
 function encrypt(text, shift) {
     var result = "";
@@ -25,8 +26,9 @@ function encrypt(text, shift) {
             }
         }
     }
-    alert('Cipher: ' + result);
-    document.querySelector('#output').innerHTML = 'Cipher: ' + result;
+    alert("Output has generated!");
+    document.querySelector('#output1').innerHTML = 'Cipher: ' + result;
+    document.querySelector('#output2').innerHTML = 'Turns: ' + shift;
 }
 
 function decrypt(text,shift){

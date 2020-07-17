@@ -1,37 +1,39 @@
 function run(){
-    let text = document.querySelector('#text').value;
-    decrypt(text , 12);
-    }
-    function encrypt(text, shift) {
-        var result = "";
-        if (true){
-            //loop through each caharacter in the text
-            for (var i = 0; i < text.length; i++) {
+let text = document.querySelector('#text').value;
+let turn = document.querySelector('#turn').value;
+decrypt(text , turn);
+}
+function encrypt(text, shift) {
+    var result = "";
+    if (true){
+        //loop through each caharacter in the text
+        for (var i = 0; i < text.length; i++) {
 
-                 //get the character code of each letter
-                var c = text.charCodeAt(i);
+             //get the character code of each letter
+            var c = text.charCodeAt(i);
 
-                // handle uppercase letters
-                if(c >= 65 && c <=  90) {
-                   result += String.fromCharCode((c - 65 + shift) % 26 + 65);
+            // handle uppercase letters
+            if(c >= 65 && c <=  90) {
+               result += String.fromCharCode((c - 65 + shift) % 26 + 65);
 
-                // handle lowercase letters
-                }else if(c >= 97 && c <= 122){
-                    result += String.fromCharCode((c - 97 + shift) % 26 + 97);
+            // handle lowercase letters
+            }else if(c >= 97 && c <= 122){
+                result += String.fromCharCode((c - 97 + shift) % 26 + 97);
 
-                // its not a letter, let it through
-                }else {
-                    result += text.charAt(i);
-                }
+            // its not a letter, let it through
+            }else {
+                result += text.charAt(i);
             }
         }
-        alert('Text: ' + result);
-        document.querySelector('#output').innerHTML = 'Text: ' + result;
     }
+    alert("Output has generated!");
+    document.querySelector('#output1').innerHTML = 'Cipher: ' + result;
+    document.querySelector('#output2').innerHTML = 'Turns: ' + shift;
+}
 
-    function decrypt(text,shift){
-        var result = "";
-        shift = (26 - shift) % 26;
-        result = encrypt(text,shift);
-        return result;
-    }
+function decrypt(text,shift){
+    var result = "";
+    shift = (26 - shift) % 26;
+    result = encrypt(text,shift);
+    return result;
+}

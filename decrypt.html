@@ -42,10 +42,11 @@
             </div>
         </nav>
     </header>
-    <script src="./try.js"></script>
+    <script src="./decrypt.js"></script>
 
     <div class="container">
-        <h3 id="output" class="col-md-12"></h3>
+        <h3 id="output1" class="col-md-12"></h3>
+        <h3 id="output2" class="col-md-12"></h3>
     </div>
 
     <form onsubmit="run(); return false;">
@@ -55,6 +56,12 @@
                   <span class="input-group-text" >Cipher: </span>
                 </div>
                 <textarea class="form-control" aria-label="With textarea" id="text"></textarea>
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" >Turns:</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" id="turn"></textarea>
             </div>
             <div class="input-group">
                 <button type="submit" class="btn btn-primary col-md-12">Submit</button>

@@ -1,10 +1,16 @@
 function run(){
 let text = document.querySelector('#text').value;
 let turn = document.querySelector('#turn').value;
-decrypt(text , turn);
+if (turn === ''){
+  decrypt(text , 12, 12);
 }
-function encrypt(text, shift) {
+else{
+  decrypt(text , turn, turn);
+}
+}
+function encrypt(text, shift, real) {
     var result = "";
+    var real = real;
     if (true){
         //loop through each caharacter in the text
         for (var i = 0; i < text.length; i++) {
@@ -28,12 +34,12 @@ function encrypt(text, shift) {
     }
     alert("Output has generated!");
     document.querySelector('#output1').innerHTML = 'Cipher: ' + result;
-    document.querySelector('#output2').innerHTML = 'Turns: ' + shift;
+    document.querySelector('#output2').innerHTML = 'Turns: ' + real;
 }
 
-function decrypt(text,shift){
+function decrypt(text, shift, real){
     var result = "";
     shift = (26 - shift) % 26;
-    result = encrypt(text,shift);
+    result = encrypt(text, shift, real);
     return result;
 }
